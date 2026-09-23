@@ -1,31 +1,280 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-<head<header {
-background-color: #183C63;
-color: #FFFFFF;
-text-align: center;
-max-width: 800px;
-margin: 0 auto;
-padding: 16px;
-}></style>>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #183C63;
+      color: #FFFFFF;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+
+    /* Artigos */
+    article {
+      display: flex;
+      gap: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      align-items: flex-start;
+    }
+
+    article img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    article div h2 {
+      margin-bottom: 6px;
+      color: #183C63;
+    }
+
+    .artigo-autor {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      margin-bottom: 14px;
+    }
+
+    button {
+      background: #f0f0f0;
+      border: none;
+      padding: 8px 14px;
+      margin-right: 8px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #e0e0e0;
+    }
+
+    button.curtido {
+      background: #ffd6d6;
+    }
+
+    /* Seções */
+    .secao {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .secao h2 {
+      color: #183C63;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #183C63;
+      padding-bottom: 8px;
+    }
+
+    /* Galeria */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .galeria-item {
+      background: #e8eef5;
+      border-radius: 10px;
+      height: 160px;
+      overflow: hidden;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Tópicos */
+    .topico {
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .topico:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .topico h3 {
+      color: #183C63;
+      margin-bottom: 6px;
+    }
+
+    .topico p {
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-<h1>Meu blog tech</h1>
-<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+
+  <header>
+    <h1>Meu Blog</h1>
+    <p>Dicas de programação e curiosidades de tecnologia</p>
+  </header>
+
+  <main>
+
+    <!-- Artigo 1 -->
+    <article>
+      <img src="imagem-blog.png"
+           alt="Um ícone em pixel art unindo uma lâmpada-circuito e um livro aberto para representar inovação e aprendizado.">
+      <div>
+        <h2>Meu primeiro post</h2>
+        <p class="artigo-autor">Por: Vitoria Borges</p>
+        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+      </div>
+    </article>
+
+    <!-- Artigo 2 -->
+    <article>
+      <img src="Gemini_Generated_Image_iunkhqiunkhqiunk.png"
+           alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+      <div>
+        <h2>Meu segundo post</h2>
+        <p class="artigo-autor">Por: Vitoria Borges</p>
+        <p>Continue explorando comigo o universo da programação e da tecnologia. Novos conteúdos em breve!</p>
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+      </div>
+    </article>
+
+    <!-- Galeria de Fotos -->
+    <section class="secao">
+      <h2>Galeria de Fotos</h2>
+      <div class="galeria">
+        <div class="galeria-item">
+          <img src="173Gr.jpg" alt="pessoa dormindo">
+        </div>
+        <div class="galeria-item">
+          <img src="nowPb.jpg" alt="pessoa comendo">
+        </div>
+        <div class="galeria-item">
+          <img src="lCQz1.jpg" alt="pessoa escutando musica">
+        </div>
+        <div class="galeria-item">
+          <img src="QFtfj.jpg" alt="pessoa vendo filmes">
+        </div>
+        <div class="galeria-item">
+          <img src="7xGcQ.jpg" alt="pessoa jogando jogos">
+        </div>
+      </div>
+    </section>
+
+    <!-- Tópicos -->
+    <section class="secao">
+      <h2>Tópicos do Dia a Dia</h2>
+
+      <div class="topico">
+        <h3>1. Dormir</h3>
+        <p><strong>O que proporciona:</strong> Restauração física e mental. Dormir bem regula os hormônios do estresse, melhora a memória, fortalece o sistema imunológico e recarrega as energias para o dia seguinte.</p>
+      </div>
+
+      <div class="topico">
+        <h3>2. Comer</h3>
+        <p><strong>O que proporciona:</strong> Prazer imediato e nutrição. Saborear sua comida favorita em casa ativa o sistema de recompensa do cérebro, trazendo uma sensação instantânea de conforto, além de fornecer os nutrientes de que seu corpo precisa.</p>
+      </div>
+
+      <div class="topico">
+        <h3>3. Escutar música</h3>
+        <p><strong>O que proporciona:</strong> Regulação emocional. A música tem o poder de mudar o seu humor em minutos. Ela ajuda a relaxar após um dia estressante, estimula o foco ou dá aquela dose de motivação e energia quando você precisa.</p>
+      </div>
+
+      <div class="topico">
+        <h3>4. Ver série</h3>
+        <p><strong>O que proporciona:</strong> Entretenimento e distração. Assistir a uma boa produção permite que você se desligue dos problemas rotineiros, estimula a imaginação através de boas histórias e gera momentos de lazer sem precisar sair do sofá.</p>
+      </div>
+
+      <div class="topico">
+        <h3>5. Jogar jogos</h3>
+        <p><strong>O que proporciona:</strong> Estímulo cognitivo e socialização. Sejam jogos de videogame, PC ou tabuleiro, eles exercitam o raciocínio rápido e a estratégia. Quando jogados online, também ajudam a manter o contato e a diversão com os amigos.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 - Blog de Marcelo Paludetto
+  </footer>
+
+  <script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao) {
+      let curtiu = false;
+
+      botao.addEventListener("click", function() {
+        const texto = botao.querySelector("span");
+        let valor = parseInt(texto.textContent);
+
+        if (!curtiu) {
+          valor++;
+          curtiu = true;
+          botao.classList.add("curtido");
+        } else {
+          valor--;
+          curtiu = false;
+          botao.classList.remove("curtido");
+        }
+
+        texto.textContent = valor;
+      });
+    });
+  </script>
+
 </body>
 </html>
-<mainmain {
-background-color: #FFFFFF;
-color: #183C63;
-}
-}>
-<h2>Meu primeiro post</h2>
-<p>Por: Vitória Borges</p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-</main>
-<img src="
-Gemini_Generated_Image_iunkhqiunkhqiunk.png" alt="Ícone em pixel art com um livro aberto, circuitos, smartphone, capelo de formatura e o texto "TECH & EDU" sobre fundo azul.">
